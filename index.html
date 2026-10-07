@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#25001f" />
+  <meta name="description" content="KAUNA Africa — People. Culture. Lasting Connections." />
+  <title>KAUNA Africa</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; min-height: 100%; }
+    body {
+      background: #190016;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 15%, rgba(151, 27, 184, .55) 0%, rgba(74, 0, 69, .35) 28%, transparent 58%),
+        linear-gradient(135deg, #180014 0%, #36002f 45%, #160012 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("kauna-hero.png") center center / cover no-repeat;
+      opacity: .98;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 35%, rgba(10, 0, 10, .28) 100%);
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      width: min(92vw, 1100px);
+      text-align: center;
+      padding: 40px;
+      margin-top: -1vh;
+    }
+
+    /* Optional HTML logo overlay. Hidden by default because the supplied artwork
+       already contains the complete logo. */
+    .brand {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      body { overflow: auto; }
+      .hero { min-height: 100svh; }
+      .hero::before { background-size: auto 100%; }
+    }
+
+    @media (max-width: 600px) {
+      .hero::before { background-position: center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero" aria-label="KAUNA Africa">
+    <div class="content">
+      <div class="brand">KAUNA AFRICA</div>
+    </div>
+  </main>
+</body>
+</html>
